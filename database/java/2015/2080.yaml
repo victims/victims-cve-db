@@ -1,0 +1,17 @@
+cve: 2015-2080
+title: "JetLeak Vulnerability: Remote Leakage Of Shared Buffers In Jetty Web Server"
+description: >
+    Critical information leakage vulnerability in the Jetty web server that allows an unauthenticated remote attacker to read arbitrary data from previous requests submitted to the server by other users.
+cvss_v2: 9.0
+references:
+    - http://blog.gdssecurity.com/labs/2015/2/25/jetleak-vulnerability-remote-leakage-of-shared-buffers-in-je.html
+    - http://eclipse.org/jetty/documentation/current/security-reports.html
+    - https://github.com/GDSSecurity/Jetleak-Testing-Script
+affected:
+    - groupId: "org.eclipse.jetty"
+      artifactId: "jetty-http"
+      version:
+        - ">=9.2.3,9.2"
+        - "<=9.2.8,9.2"
+      fixedin:
+        - ">=9.2.9,9.2"
