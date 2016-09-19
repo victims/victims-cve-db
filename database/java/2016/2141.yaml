@@ -1,0 +1,19 @@
+cve: 2016-2141
+title: "Authorization bypass in JGroups"
+description: >
+    It was found that JGroups did not require necessary headers for encrypt and auth protocols from new nodes joining the cluster. An attacker could use this flaw to bypass security restrictions, and use this vulnerability to send and receive messages within the cluster, leading to information disclosure, message spoofing, or further possible attacks.
+cvss_v2: 7.5
+references:
+    - https://bugzilla.redhat.com/show_bug.cgi?id=1313589
+    - https://issues.jboss.org/browse/JGRP-2021
+affected:
+    - groupId: "org.jgroups"
+      artifactId: "jgroups"
+      version:
+        - "<=3.2.15,3"
+        - "<=3.6.8,3.6"
+        - "<=2.6.22"
+      fixedin:
+        - ">=3.2.16,3.2"
+        - ">=3.6.9,3"
+        - ">=4.0"
