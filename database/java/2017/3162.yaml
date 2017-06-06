@@ -1,0 +1,17 @@
+cve: 2017-3162
+title: "Apache Hadoop DataNode web UI vulnerability"
+description: >
+    HDFS clients interact with a servlet on the DataNode to browse the HDFS namespace. The NameNode is provided as a query parameter that is not validated in Apache Hadoop before 2.7.0.
+cvss_v2: 6.0
+references:
+    - https://bugzilla.redhat.com/show_bug.cgi?id=1448373
+    - http://openwall.com/lists/oss-security/2017/04/26/1
+    - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-3162
+    - http://seclists.org/oss-sec/2017/q2/126
+affected:
+    - groupId: "org.apache.hadoop"
+      artifactId: "hadoop-hdfs"
+      version:
+        - "<=2.6.5"
+      fixedin:
+        - ">=2.7.0"
